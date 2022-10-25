@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { catchError, Observable, of, tap } from 'rxjs';
 import { Project } from '../models/projet';
 
@@ -8,7 +9,9 @@ import { Project } from '../models/projet';
 })
 export class ProjectService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private router: Router) { }
 
   // To get All Projects from Api.
   getProjectList(): Observable<Project[]> {
@@ -34,4 +37,8 @@ export class ProjectService {
     console.error(error);
     return of(errorValue);
   }
+
+
+
+
 }

@@ -18,10 +18,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { SearchProjectComponent } from './components/search-project/search-project.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { WorkListComponent } from './components/work-list/work-list.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ServicesComponent } from './components/services/services.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const portfolioRoute: Routes = [
-  {path:'projects', component: ProjectListComponent},
   {path:'home', component: HomeComponent},
+  {path:'projects', component: ProjectListComponent},
+  {path:'works', component: WorkListComponent},
+  {path:'services', component: ServicesComponent},
 ]
 
 @NgModule({
@@ -31,7 +38,12 @@ const portfolioRoute: Routes = [
     NavbarComponent,
     HomeComponent,
     ProjectListComponent,
-    SearchProjectComponent
+    SearchProjectComponent,
+    FooterComponent,
+    WorkListComponent,
+    AboutMeComponent,
+    ServicesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

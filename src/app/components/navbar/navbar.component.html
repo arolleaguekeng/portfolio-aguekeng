@@ -8,17 +8,13 @@
       </a>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><button mat-button>Homes</button></li>
+        <li><button mat-button (click)="router.openHomePage()">Homes</button></li>
         <li>        
-          <button mat-button [matMenuTriggerFor]="menu">Works</button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>Stages</button>
-            <button mat-menu-item>Item 2</button>
-          </mat-menu>
+          <button mat-button (click)="router.openWorksPage()">Works</button>
         </li>
         <li><button mat-button>About</button></li>
-        <li><button mat-button>Projects</button></li>
-        <li><button mat-button>Services</button></li>
+        <li><button mat-button (click)="router.openProjectsPage()">Projects</button></li>
+        <li><button mat-button (click)="router.openServicesPage()">Services</button></li>
         
       </ul>
 
@@ -26,10 +22,8 @@
         <button 
           mat-stroked-button color="basic" 
           matTooltip="Writre me a Mail" >
-          Bot chat
+          Contact me
         </button> 
-    
-
       </div>
     </header>
   </div>

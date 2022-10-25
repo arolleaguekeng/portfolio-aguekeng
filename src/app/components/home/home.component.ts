@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { PortfolioService } from 'src/app/services/portfolio.service';
+
 
 @Component({
   selector: 'app-home',
@@ -9,14 +10,12 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   constructor(
-    private router: Router
+    public router: PortfolioService
   ){}
 
-  ngOnInit(): void {
-  }
+  
 
-  openProjectList(){
-    this.router.navigate([`/projects`]);
+  ngOnInit(): void {
   }
 
 }
