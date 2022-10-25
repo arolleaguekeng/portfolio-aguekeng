@@ -1,13 +1,1 @@
-.rounded-badge{
-    border-radius: 20px;
-    background-color: rgb(18, 9, 138);
-    color: white;
-    padding-left: 2%;
-    padding-right: 2%;
-}
 
-.home-right{
-    background-image: url('../assets/pict.png');
-     height:1000px;
-     background-size: cover;
-   }

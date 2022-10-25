@@ -1,0 +1,13 @@
+.home-right{
+    background-image: url('../../../assets/pict.png');
+     height:600px;
+     background-size: cover;
+}
+
+.rounded-badge{
+  border-radius: 20px;
+  background-color: rgb(18, 9, 138);
+  color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+}

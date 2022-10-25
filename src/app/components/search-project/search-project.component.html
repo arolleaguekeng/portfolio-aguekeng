@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-content">
+        <div class="form-control">
+            <input 
+            #searchBox
+            placeholder="Search Pokemon"
+            class="form-control"
+            >
+        </div>
+    </div>
+    <div class="col">
+        <button mat-button [matMenuTriggerFor]="menu">Works</button>
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item>Stages</button>
+        <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        <button mat-button [matMenuTriggerFor]="menu">Works</button>
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item>Stages</button>
+        <button mat-menu-item>Item 2</button>
+        </mat-menu>        
+    </div>
+
+</div>
+

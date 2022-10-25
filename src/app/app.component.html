@@ -9,82 +9,19 @@
   <title>Document</title>
 </head>
 <body>
-  
+
+  <app-navbar></app-navbar>
   <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <span class="span-bold-small" >Aguekeng</span>
-        <span style="color: red; font-size: 30px;">.</span>
-        <span class="example-spacer"></span>
-      </a>
-
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><button mat-button>Home</button></li>
-        <li>        
-          <button mat-button [matMenuTriggerFor]="menu">Works</button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
-          </mat-menu>
-        </li>
-        <li><button mat-button>About</button></li>
-        <li><button mat-button>Projects</button></li>
-        <li><button mat-button>Services</button></li>
-        
-      </ul>
-
-      <div class="col-md-3 text-end">
-        <button mat-flat-button color="warn" >Let's chat</button> 
-      </div>
-    </header>
+    <router-outlet></router-outlet> 
   </div>
-  
-  <div class="container"> 
-    <div class="row">
-      <div class="col m9 s12">
-      <div class="row">
-        <h1 class="h1">
-           <span class="span-bold">I am </span>
-           <span class="rounded-badge">  FullStack  </span>
-           <br>
-           <br>
-           <span class="span-bold">Aguekeng Arolle</span> 
-        </h1>
-        <h3>Devellop Backend and Frontend for over 3 years as FullStack develloper</h3>
-        <div class="col-6">
-          <button mat-flat-button color="warn">Hire me</button>
-          <button mat-button color="warn">Projects</button>
-        </div>
-        <div class="row">
-          <div class="row">
-            <div class="col">
-              <span class="span-bold">+20</span>
-              <p>Client satisfait</p>
-            </div>
-            <div class="col">
-              <img src="../assets/py.png" width="100px">
-            </div>
+   
 
-          </div>
-          
-          <div class="col-6">
-            <span class="span-bold">500</span>
-            <p>Project Done</p>
-          </div>
-          <div class="col-6">
-            <span class="span-bold">Contact</span>
-            <p>arolleaguekeng@gmail.com</p>
-          </div>
-        </div>
-        
-      </div>
-      </div>
-      <div class="col m2 home-right">
-       
-      </div>
-    </div>
-    
-  </div>
-  
+  <button
+          mat-fab aria-label="Example icon button with a heart icon"
+          color="primary"
+          matTooltip="Chat with my Bot" 
+          style="position: fixed; bottom: 60px; right: 50px;">
+          <mat-icon>chat</mat-icon>
+  </button> 
 </body>
 </html>
