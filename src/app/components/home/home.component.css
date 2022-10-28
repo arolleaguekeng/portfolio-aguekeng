@@ -1,13 +1,23 @@
 .home-right{
     background-image: url('../../../assets/pict.png');
-     height:600px;
+     height:500px;
      background-size: cover;
 }
 
-.rounded-badge{
-  border-radius: 20px;
-  background-color: rgb(18, 9, 138);
-  color: white;
-  padding-left: 2%;
-  padding-right: 2%;
+.special-span{
+  color: blueviolet;
+  font-weight: bold;
+  font-family: Fira Code, "Helvetica Neue", sans-serif;
 }
+.line{
+  height: 0.3px;
+  width: 100%;
+  background-color: black;
+  margin-bottom: 2%;
+  color: transparent;
+  margin-left: 5%;
+  margin-top: 15px;
+}
+
+
+

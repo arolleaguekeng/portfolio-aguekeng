@@ -2,28 +2,27 @@
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 border-bottom">
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <span>
+          <img src="./assets/logo.png" width="29" style="margin-right: 5px;">  
+        </span>
         <span class="span-bold-small" >Aguekeng</span>
         <span style="color: red; font-size: 30px;">.</span>
         <span class="example-spacer"></span>
       </a>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><button mat-button (click)="router.openHomePage()">Homes</button></li>
-        <li>        
-          <button mat-button (click)="router.openWorksPage()">Works</button>
-        </li>
-        <li><button mat-button>About</button></li>
-        <li><button mat-button (click)="router.openProjectsPage()">Projects</button></li>
-        <li><button mat-button (click)="router.openServicesPage()">Services</button></li>
-        
-      </ul>
 
-      <div class="col-md-3 text-end">
-        <button 
-          mat-stroked-button color="basic" 
-          matTooltip="Writre me a Mail" >
-          Contact me
-        </button> 
+
+      <div class="col-md-6 text-end">
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><button mat-button (click)="router.openHomePage()">Homes</button></li>
+          <li>        
+            <button mat-button (click)="router.openWorksPage()">Works</button>
+          </li>
+          <li><button mat-button>About</button></li>
+          <li><button mat-button (click)="router.openProjectsPage()">Projects</button></li>
+          <li><button mat-button (click)="router.openServicesPage()">Services</button></li>
+          
+        </ul> 
       </div>
     </header>
   </div>

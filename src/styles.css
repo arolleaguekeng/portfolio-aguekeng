@@ -1,17 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Fira Code, "Helvetica Neue", sans-serif; }
 
 h1{
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Fira Code, "Helvetica Neue", sans-serif;
   font-size: 300px;
   padding-top: 5%;
  }
 
 .span-bold{
   font-weight: bold;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Fira Code, "Helvetica Neue", sans-serif;
   font-size: 45px;
   margin-top: 5%;
 }
@@ -19,7 +19,8 @@ h1{
 
 .span-bold-small{
   font-weight: bold;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: 25px;
+  font-family: Fira Code, "Helvetica Neue", sans-serif;
+  font-size: 20px;
+
   
 }

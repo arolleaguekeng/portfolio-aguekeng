@@ -1,5 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { catchError, Observable, of, tap } from 'rxjs';
 import { Project } from 'src/app/models/projet';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-project-list',
@@ -7,22 +11,33 @@ import { Project } from 'src/app/models/projet';
   styleUrls: ['./project-list.component.css']
 })
 export class ProjectListComponent implements OnInit {
-  projectList: Project[] = [
-    {
-      id: 1,
-      name: "Exca Project",
-      description: "Application des gestion des assurances",
-      created: Date.prototype,
-      statut: true,
-      link: "link",
-      picture:  "../../../assets/result_dash.png",
-      createdAt: Date.prototype,
-    }
-  ]
-  constructor() { }
+
+  projectList: Project[]
+  
+
+  
+  constructor(
+    private router: Router,
+    private http: HttpClient,
+    private projectService : ProjectService
+  ) { }
+
+  goToProjectDetail(project: Project){
+    this.router.navigate([`/project/${project.id}`])
+  }
 
   ngOnInit(): void {
-      console.table(this.projectList)
+      this.projectService.getProjectList()
+      .subscribe(projectList => this.projectList = projectList)
+  }
+
+  private log(response: any){
+    console.table(response);
+  }
+  
+  private handleError(error: Error, errorValue: any){
+    console.error(error);
+    return of(errorValue);
   }
 
 }

@@ -23,8 +23,11 @@ import { WorkListComponent } from './components/work-list/work-list.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ServicesComponent } from './components/services/services.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ProjectDetailsComponent } from './components/project-details/project-details.component';
+import { CardProjectComponent } from './components/card-project/card-project.component';
 
 const portfolioRoute: Routes = [
+  {path:'project/:id', component: ProjectDetailsComponent},
   {path:'home', component: HomeComponent},
   {path:'projects', component: ProjectListComponent},
   {path:'works', component: WorkListComponent},
@@ -43,7 +46,9 @@ const portfolioRoute: Routes = [
     WorkListComponent,
     AboutMeComponent,
     ServicesComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProjectDetailsComponent,
+    CardProjectComponent
   ],
   imports: [
     BrowserModule,
