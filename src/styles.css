@@ -7,6 +7,7 @@ h1{
   font-family: Fira Code, "Helvetica Neue", sans-serif;
   font-size: 300px;
   padding-top: 5%;
+  padding: 3%;
  }
 
 .span-bold{
@@ -14,13 +15,13 @@ h1{
   font-family: Fira Code, "Helvetica Neue", sans-serif;
   font-size: 45px;
   margin-top: 5%;
+  padding: 3%;
 }
 
 
 .span-bold-small{
   font-weight: bold;
   font-family: Fira Code, "Helvetica Neue", sans-serif;
-  font-size: 20px;
-
-  
+  font-size: 30px;
+  padding: 3%;
 }

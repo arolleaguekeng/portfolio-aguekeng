@@ -25,6 +25,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 import { CardProjectComponent } from './components/card-project/card-project.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const portfolioRoute: Routes = [
   {path:'project/:id', component: ProjectDetailsComponent},
@@ -63,9 +64,12 @@ const portfolioRoute: Routes = [
     MatInputModule,
     AppRoutingModule,
     RouterModule.forChild(portfolioRoute),
+    HttpClientModule,
 
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

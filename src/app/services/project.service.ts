@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, Observable, of, tap } from 'rxjs';
@@ -9,14 +9,23 @@ import { Project } from '../models/projet';
 })
 export class ProjectService {
   
-  baseUrl: string ='http://127.0.0.1:8000/portfolio/api'
+  baseUrl: string ='http://127.0.0.1:8000/portfolio/api'  
+   
   constructor(
-    private http: HttpClient) { }
+    private http: HttpClient) { 
+      
+    }
 
 
   // To get All Projects from Api.
   getProjectList(): Observable<Project[]> {
-    return this.http.get<Project[]>(`${this.baseUrl}/get-all-projects`).pipe(
+    const headers = new HttpHeaders()
+    .append('Content-Type', 'application/json')
+    .append('Access-Control-Allow-Headers', 'Content-Type')
+    .append('Access-Control-Allow-Methods', '*')
+    .append('Access-Control-Allow-Credentials', 'true')
+    .append('Access-Control-Allow-Origin', ' http://127.0.0.1:8000/');
+  return this.http.get<Project[]>(`${this.baseUrl}/get-all-projects/` , {headers:headers}).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, null))
     );
@@ -40,8 +49,4 @@ export class ProjectService {
     console.error(error);
     return of(errorValue);
   }
-
-
-
-
 }
